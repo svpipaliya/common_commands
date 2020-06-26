@@ -1,0 +1,24 @@
+# following are all of the different ways of granting file permissions for owners, users, and public - numeric method
+chmod 400 file - Read by owner
+chmod 040 file - Read by group
+chmod 004 file - Read by world
+chmod 200 file - Write by owner
+chmod 020 file - Write by group
+chmod 002 file - Write by world
+chmod 100 file - execute by owner
+chmod 010 file - execute by group
+chmod 001 file - execute by world
+chmod 444 file - Allow read permission to owner and group and world
+chmod 777 file - Allow everyone to read, write, and execute file
+
+#following is the alphabetical and the more intutive way of doing it
+#Deny execute permission to everyone:
+chmod a-x file
+#Allow read permission to everyone:
+chmod a+r file
+#Make a file readable and writable by the group and others:
+chmod go+rw file
+#Make a shell script executable by the user/owner
+$ chmod u+x myscript.sh
+# checking status of file permissions (List current permissions: -- u (owner) -- g (group) -- O (Other))
+ls -l 
