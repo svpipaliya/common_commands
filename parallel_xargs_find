@@ -1,0 +1,13 @@
+# command to utilize parallel to copy and paste single file into multiple directories
+parallel cp fileNameHere ::: /dir1/ /dir2/ /dir3/
+
+# using cp to copy multiple files into multiple folders
+cp file1 file2 file3 /dir1/
+
+#alternative method by using xargs
+xargs -n 1 cp -v filename<<<"/dir1/ /dir2/ /dir3/" 
+#or
+echo "/dir1/ /dir2/ /dir3/" | xargs -n 1 cp -v filename
+
+# using find to perform the same tasks
+find /dir1/ /dir2/ -maxdepth 0 -exec cp filename {} \;
