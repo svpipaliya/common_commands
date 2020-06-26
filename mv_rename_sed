@@ -1,0 +1,8 @@
+# file name change using mv to batch add prefix to folder names
+for f in * ; do mv -- "$f" "masurca_$f” ; done
+
+#using rename function
+rename  "s/Gin_Gmuris//" SRR*
+
+#cutting specific number of characters from filename using sed
+f in ./*.; do newname=$( echo $f | sed -r 's/_S[0-9]{3}_/_/' ); mv $f $newname; done
