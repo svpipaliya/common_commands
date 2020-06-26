@@ -1,0 +1,2 @@
+# file name change using mv to batch add prefix to folder names
+for f in * ; do mv -- "$f" "masurca_$f” ; done
